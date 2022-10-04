@@ -1,0 +1,43 @@
+.accordion {
+  padding: 70px 20px;
+}
+
+.accordion__container {
+  max-width: 1230px;
+  margin: 0 auto;
+}
+
+.accordion__title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+  color: $dark-green;
+  margin-bottom: 30px;
+}
+
+.accordion__head {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30.5px 0;
+  border-top: 2px solid #e5e5e5;
+}
+
+.accordion__head-title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 39px;
+  color: $brown;
+}
+
+.accordion__body {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-bottom: 60px;
+}
+
+.accordion__desc {
+  line-height: 28px;
+}

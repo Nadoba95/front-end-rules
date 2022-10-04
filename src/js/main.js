@@ -1,2 +1,4 @@
+"use strict";
 console.log("test");
-console.log("asasasasass");
+
+const accordions = document.querySelectorAll(".accordion__head");
