@@ -1,0 +1,28 @@
+%button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.btn {
+  @extend %button;
+}
+
+.btn--red {
+  @extend %button;
+  width: 170px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  background-color: $red;
+  color: white;
+  border-radius: 5px;
+}
+
+.btn--border {
+  @extend %button;
+  border: 1px solid $brown;
+  padding: 22px 29px;
+  border-radius: 50%;
+}

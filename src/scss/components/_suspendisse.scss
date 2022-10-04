@@ -1,0 +1,28 @@
+.suspendisse {
+  display: flex;
+  justify-content: center;
+  gap: 170px;
+  padding: 70px 20px;
+}
+
+.suspendisse__card {
+  max-width: 530px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-top: 5px;
+}
+
+.suspendisse__title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+  color: $dark-green;
+}
+
+.suspendisse__desc {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  color: $brown;
+}

@@ -1,0 +1,59 @@
+.cities,
+.food {
+  background-color: $silver;
+  padding: 70px 20px;
+}
+
+.cities__container,
+.food__container {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 0 auto;
+}
+
+.cities__title,
+.food__title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+  color: $dark-green;
+}
+
+.slider {
+  display: flex;
+  gap: 70px;
+}
+
+.slide__image {
+  width: 580px;
+  height: 350px;
+}
+
+.slide__title {
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 3px;
+  color: $red;
+  padding-top: 40px;
+}
+
+.slide__desc {
+  max-width: 580px;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 34px;
+  padding-top: 20px;
+}
+
+.slide__date {
+  line-height: 16px;
+  padding-top: 20px;
+}
+
+.cities__arrows,
+.food__arrows {
+  display: flex;
+  gap: 10px;
+}
