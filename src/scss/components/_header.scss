@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: 255px;
+  padding: 20px 215px;
+}
+
+.header__list {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.header__links {
+  color: black;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 21px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.header > button {
+  background-color: transparent;
+  border: none;
+}
