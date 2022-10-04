@@ -1,28 +1,28 @@
-.condimentum {
+.hero {
   background-image: url("../../assets/images/woman.png");
   width: 100%;
   height: 610px;
   padding: 163px 214px;
 }
 
-.condimentum__card {
+.hero__card {
   max-width: 600px;
   background-color: rgba(black, $alpha: 0.2);
   color: white;
   padding: 30px 20px;
 }
 
-.condimentum__title {
+.hero__title {
   font-size: 50px;
   font-weight: 700;
   line-height: 51px;
 }
 
-.condimentum__title > span {
+.hero__title > span {
   color: $light-green;
 }
 
-.condimentum__desc {
+.hero__desc {
   font-size: 22px;
   line-height: 32px;
   padding-top: 27px;
