@@ -32,10 +32,12 @@
 }
 
 .accordion__body {
+  max-height: 0px;
   display: flex;
   flex-direction: column;
   gap: 30px;
-  padding-bottom: 60px;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
 }
 
 .accordion__desc {

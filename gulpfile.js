@@ -63,7 +63,7 @@ gulp.task("iconfont", () => {
 
 // copy js files to dist
 gulp.task("copy-js", () => {
-  return gulp.src("src/js/*.js").pipe(gulp.dest("dist/js"));
+  return gulp.src("src/js/**/*.js").pipe(gulp.dest("dist/js"));
 });
 
 // copy html files to dist

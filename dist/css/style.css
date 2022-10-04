@@ -133,8 +133,8 @@ iconfont Webfont
 */
 @font-face {
   font-family: 'iconfont';
-  src: url("../fonts/iconfont.eot?1664804765400");
-  src: url("../fonts/iconfont.eot?#iefix-1664804765400") format("embedded-opentype"), url("../fonts/iconfont.woff2?1664804765400") format("woff2"), url("../fonts/iconfont.woff?1664804765400") format("woff"), url("../fonts/iconfont.ttf?1664804765400") format("truetype");
+  src: url("../fonts/iconfont.eot?1664912199954");
+  src: url("../fonts/iconfont.eot?#iefix-1664912199954") format("embedded-opentype"), url("../fonts/iconfont.woff2?1664912199954") format("woff2"), url("../fonts/iconfont.woff?1664912199954") format("woff"), url("../fonts/iconfont.ttf?1664912199954") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
@@ -157,35 +157,32 @@ iconfont Webfont
 /*
 Glyphs list
 */
-.icon-airport::before {
+.icon-arrow-left::before {
   content: '\ea01'; }
 
-.icon-bicycle::before {
+.icon-arrow-right::before {
   content: '\ea02'; }
 
-.icon-car::before {
+.icon-close::before {
   content: '\ea03'; }
 
-.icon-dog-park::before {
+.icon-menu::before {
   content: '\ea04'; }
 
-.icon-ferry::before {
+.icon-minus::before {
   content: '\ea05'; }
 
-.icon-park::before {
+.icon-plus::before {
   content: '\ea06'; }
 
-.icon-restaurant::before {
+.icon-search::before {
   content: '\ea07'; }
 
-.icon-rocket::before {
+.icon-show-less-arrow::before {
   content: '\ea08'; }
 
-.icon-toilets::before {
+.icon-show-more-arrow::before {
   content: '\ea09'; }
-
-.icon-zoo::before {
-  content: '\ea0a'; }
 
 body {
   margin: 0;
@@ -535,6 +532,7 @@ body {
   color: #575756; }
 
 .accordion__body {
+  max-height: 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -543,7 +541,9 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 30px;
-  padding-bottom: 60px; }
+  overflow: hidden;
+  -webkit-transition: max-height 0.4s ease-out;
+  transition: max-height 0.4s ease-out; }
 
 .accordion__desc {
   line-height: 28px; }
