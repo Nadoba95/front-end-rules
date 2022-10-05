@@ -1,0 +1,22 @@
+.footer {
+  background-color: $silver;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  line-height: 30px;
+  padding: 20px 215px;
+}
+
+.footer__list {
+  display: flex;
+  gap: 16px;
+}
+
+.footer__link,
+.footer__copyright {
+  color: $brown;
+}
+
+.footer__link:hover {
+  color: $black;
+}

@@ -3,8 +3,9 @@
 }
 
 .accordion__container {
-  max-width: 1230px;
+  width: clamp(250px, 100%, 1230px);
   margin: 0 auto;
+  border-bottom: 2px solid $acc-border;
 }
 
 .accordion__title {
@@ -20,8 +21,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30.5px 0;
-  border-top: 2px solid #e5e5e5;
+  padding: 31px 0;
+  border-top: 2px solid $acc-border;
+}
+
+.accordion__head:hover {
+  background-color: darken($white, $amount: 2);
 }
 
 .accordion__head-title {
@@ -33,13 +38,28 @@
 
 .accordion__body {
   max-height: 0px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+  padding-right: 42px;
   overflow: hidden;
-  transition: max-height 0.4s ease-out;
+  transition: max-height $dropdown-duration ease-out;
 }
 
 .accordion__desc {
   line-height: 28px;
+}
+
+.accordion__desc:nth-child(1) {
+  padding-top: 15px;
+}
+
+.accordion__desc:nth-child(2) {
+  padding-top: 27px;
+}
+
+.accordion__orange {
+  color: $red;
+  font-weight: bold;
+}
+
+.accordion__orange:hover {
+  color: lighten($red, $amount: 10);
 }

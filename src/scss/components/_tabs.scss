@@ -1,11 +1,8 @@
-.books {
-  display: flex;
-  flex-direction: column;
-  gap: 140px;
+.tabs {
   padding: 70px 20px;
 }
 
-.books__container {
+.tabs__container {
   width: fit-content;
   display: flex;
   flex-direction: column;
@@ -13,7 +10,7 @@
   margin: 0 auto;
 }
 
-.books__title {
+.tabs__title {
   font-size: 40px;
   font-weight: 700;
   line-height: 50px;
@@ -45,7 +42,7 @@
 
   &.active {
     background-color: $light-green;
-    color: white;
+    color: $white;
     font-weight: 700;
   }
 }
@@ -57,35 +54,12 @@
   flex-direction: column;
   gap: 20px;
   padding: 30px;
+
+  &.hidden {
+    display: none;
+  }
 }
 
 .calendar__desc {
   line-height: 28px;
-}
-
-.books__box {
-  display: flex;
-  justify-content: center;
-  gap: 170px;
-}
-
-.books__card {
-  max-width: 530px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  padding-top: 46px;
-}
-
-.books__subtitle {
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 50px;
-  color: $dark-green;
-}
-
-.books__desc {
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 30px;
 }

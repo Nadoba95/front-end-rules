@@ -3,11 +3,13 @@
   background-color: transparent;
   text-decoration: none;
   border: none;
+  outline: none;
   cursor: pointer;
 }
 
 .btn {
   @extend %button;
+  transition: $btns-transition-lenght;
 }
 
 .btn--red {
@@ -21,8 +23,12 @@
   font-weight: 700;
   line-height: 30px;
   background-color: $red;
-  color: white;
+  color: $white;
   border-radius: 5px;
+}
+
+.btn--red:hover {
+  background-color: lighten($red, $amount: 10);
 }
 
 .btn--border {
@@ -30,4 +36,9 @@
   border: 1px solid $brown;
   padding: 22px 29px;
   border-radius: 50%;
+  transition: $btns-transition-lenght;
+}
+
+.btn--border:hover {
+  background-color: darken($silver, $amount: 5);
 }

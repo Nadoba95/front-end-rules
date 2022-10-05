@@ -24,55 +24,33 @@
         </ul>
       </nav>
       <button class="btn">
-        <svg
-          class="header__search-icon"
-          width="41"
-          height="41"
-          viewBox="0 0 41 41"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M7.76562 22.6406C9.80729 24.6823 12.2865 25.7031 15.2031 25.7031C18.1198 25.7031 20.599 24.6823 22.6406 22.6406C24.6823 20.599 25.7031 18.1198 25.7031 15.2031C25.7031 12.2865 24.6823 9.80729 22.6406 7.76562C20.599 5.72396 18.1198 4.70312 15.2031 4.70312C12.2865 4.70312 9.80729 5.72396 7.76562 7.76562C5.72396 9.80729 4.70312 12.2865 4.70312 15.2031C4.70312 18.1198 5.72396 20.599 7.76562 22.6406ZM29.2031 25.7031L40.7969 37.2969L37.2969 40.7969L25.7031 29.2031V27.3438L25.0469 26.6875C22.276 29.0938 18.9948 30.2969 15.2031 30.2969C10.974 30.2969 7.36458 28.8385 4.375 25.9219C1.45833 23.0052 0 19.4323 0 15.2031C0 10.974 1.45833 7.40104 4.375 4.48438C7.36458 1.49479 10.974 0 15.2031 0C19.4323 0 23.0052 1.49479 25.9219 4.48438C28.8385 7.40104 30.2969 10.974 30.2969 15.2031C30.2969 16.7344 29.9323 18.4844 29.2031 20.4531C28.474 22.349 27.6354 23.8802 26.6875 25.0469L27.3438 25.7031H29.2031Z"
-            fill="#F05A28"
-          />
-        </svg>
+        <span class="icon-search"></span>
       </button>
       <button class="btn hidden">
-        <svg
-          class="header__menu-icon hidden"
-          width="30"
-          height="20"
-          viewBox="0 0 30 20"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M0 0H30V3.35938H0V0ZM0 11.6406V8.35938H30V11.6406H0ZM0 20V16.6406H30V20H0Z"
-            fill="#575756"
-          />
-        </svg>
-        <svg
-          class="header__close-icon hidden"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M23.6406 2.70312L14.3438 12L23.6406 21.2969L21.2969 23.6406L12 14.3438L2.70312 23.6406L0.359375 21.2969L9.65625 12L0.359375 2.70312L2.70312 0.359375L12 9.65625L21.2969 0.359375L23.6406 2.70312Z"
-            fill="#575756"
-          />
-        </svg>
+        <span class="icon-menu"></span>
+        <span class="icon-close hidden"></span>
       </button>
+
+      <div class="header__overlay hidden">
+        <button class="btn">
+          <span class="icon-close"></span>
+        </button>
+        <input class="header__input" type="text" placeholder="Search" />
+        <button class="btn">
+          <span class="icon-search"></span>
+        </button>
+      </div>
     </header>
 
     <main>
-      <section class="hero">
+      <section
+        class="hero"
+        style="background-image: url(assets/images/woman.png)"
+      >
         <div class="hero__card">
           <h1 class="hero__title">
-            Donec <span>condimentum</span> viverra ante
+            Donec <span class="hero__light-green">condimentum</span> viverra
+            ante
           </h1>
           <p class="hero__desc">
             Nullam molestie elit vel massa accumsan lacinia. Aliquam faucibus
@@ -82,10 +60,10 @@
         </div>
       </section>
 
-      <section class="selfie">
-        <div class="selfie__card">
-          <h2 class="selfie__title">Suspendisse vitae purus quis dui</h2>
-          <p class="selfie__desc">
+      <section class="text-image">
+        <div class="text-image__card text-image__card--padding">
+          <h2 class="text-image__title">Suspendisse vitae purus quis dui</h2>
+          <p class="text-image__desc">
             Nam a augue eu ipsum accumsan pretium. Proin ut dolor id arcu
             dignissim dictum. Aenean laoreet, felis vel dapibus interdum, turpis
             nunc congue tellus, sed ultricies lorem nulla eget diam.
@@ -124,49 +102,26 @@
           </div>
           <div class="cities__arrows">
             <button class="btn btn--border">
-              <svg
-                class="cities__arrow-left-icon"
-                width="19"
-                height="30"
-                viewBox="0 0 19 30"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M18.5547 26.4844L15.0391 30L0.0390625 15L15.0391 0L18.5547 3.51562L7.07031 15L18.5547 26.4844Z"
-                  fill="#F05A28"
-                />
-              </svg>
+              <span class="icon-arrow-left"></span>
             </button>
             <button class="btn btn--border">
-              <svg
-                class="cities__arrow-right-icon"
-                width="19"
-                height="30"
-                viewBox="0 0 19 30"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M0.445312 26.4844L11.9297 15L0.445312 3.51562L3.96094 0L18.9609 15L3.96094 30L0.445312 26.4844Z"
-                  fill="#F05A28"
-                />
-              </svg>
+              <span class="icon-arrow-right"></span>
             </button>
           </div>
         </div>
       </section>
 
-      <section class="books">
-        <div class="books__container">
-          <h2 class="books__title">Turpis eu ultrices porttitor</h2>
+      <section class="tabs">
+        <div class="tabs__container">
+          <h2 class="tabs__title">Turpis eu ultrices porttitor</h2>
           <div class="calendar">
             <div class="calendar__years">
-              <div class="calendar__year active">2021</div>
-              <div class="calendar__year">2020</div>
-              <div class="calendar__year">2019</div>
-              <div class="calendar__year">2018</div>
+              <div class="calendar__year active" data-year="0">2021</div>
+              <div class="calendar__year" data-year="1">2020</div>
+              <div class="calendar__year" data-year="2">2019</div>
+              <div class="calendar__year" data-year="3">2018</div>
             </div>
+
             <div class="calendar__desc-box">
               <p class="calendar__desc">
                 Proin pretium vehicula sagittis. Donec eget orci eget nunc
@@ -184,19 +139,66 @@
                 Pellentesque at vehicula lacus.
               </p>
             </div>
+            <div class="calendar__desc-box hidden">
+              <p class="calendar__desc">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam
+                repudiandae voluptatem ratione ducimus odio. Debitis ducimus
+                expedita earum nobis non alias sequi culpa. Quam, illo iusto.
+                Provident quod quasi ducimus exercitationem doloremque. Facilis
+                nostrum itaque soluta esse rem culpa quidem velit a, quibusdam
+                eaque. Commodi earum mollitia nesciunt labore obcaecati.
+              </p>
+              <p class="calendar__desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                adipisci sapiente, porro ad illo autem quod! Blanditiis velit
+                facere quas.
+              </p>
+            </div>
+            <div class="calendar__desc-box hidden">
+              <p class="calendar__desc">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Deleniti illo vitae nesciunt consequatur, nostrum tenetur
+                voluptate maiores iste. Corporis assumenda quidem eos nostrum
+                autem maiores illum asperiores blanditiis natus dignissimos
+                omnis non similique esse illo tempora ullam cumque, laborum
+                culpa incidunt consequuntur soluta sed? Voluptate iusto
+                praesentium in earum maiores!
+              </p>
+              <p class="calendar__desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quisquam impedit velit labore maxime numquam expedita odio
+                delectus nesciunt fuga nulla a iste, enim itaque harum,
+                voluptatibus dolore? Fuga odit a suscipit, iusto beatae eaque
+                quia quos nam hic temporibus similique!
+              </p>
+            </div>
+            <div class="calendar__desc-box hidden">
+              <p class="calendar__desc">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Impedit dolore officiis quod vel! Deleniti provident suscipit
+                facere, vel quaerat ipsam.
+              </p>
+              <p class="calendar__desc">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Maiores, laudantium. Reprehenderit consequuntur nesciunt sed
+                facere deserunt, aut, porro eaque sequi consectetur beatae
+                assumenda. Ut eos, facere quidem delectus autem sint.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="books__box">
-          <img src="assets/images/books.png" alt="books" />
-          <div class="books__card">
-            <h3 class="books__subtitle">Proin pretium vehicula</h3>
-            <p class="books__desc">
-              Etiam vulputate ipsum massa. Pellentesque porttitor, mi varius
-              sollicitudin varius, lacus ante ullamcorper justo, in semper ante
-              velit ac ipsum.
-            </p>
-            <a class="btn btn--red" href="#">Fusce blandit</a>
-          </div>
+      </section>
+
+      <section class="text-image text-image--reverse">
+        <img src="assets/images/books.png" alt="books" />
+        <div class="text-image__card">
+          <h3 class="text-image__title">Proin pretium vehicula</h3>
+          <p class="text-image__desc">
+            Etiam vulputate ipsum massa. Pellentesque porttitor, mi varius
+            sollicitudin varius, lacus ante ullamcorper justo, in semper ante
+            velit ac ipsum.
+          </p>
+          <a class="btn btn--red" href="#">Fusce blandit</a>
         </div>
       </section>
 
@@ -229,34 +231,10 @@
           </div>
           <div class="food__arrows">
             <button class="btn btn--border">
-              <svg
-                class="food__arrow-left-icon"
-                width="19"
-                height="30"
-                viewBox="0 0 19 30"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M18.5547 26.4844L15.0391 30L0.0390625 15L15.0391 0L18.5547 3.51562L7.07031 15L18.5547 26.4844Z"
-                  fill="#F05A28"
-                />
-              </svg>
+              <span class="icon-arrow-left"></span>
             </button>
             <button class="btn btn--border">
-              <svg
-                class="food__arrow-right-icon"
-                width="19"
-                height="30"
-                viewBox="0 0 19 30"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M0.445312 26.4844L11.9297 15L0.445312 3.51562L3.96094 0L18.9609 15L3.96094 30L0.445312 26.4844Z"
-                  fill="#F05A28"
-                />
-              </svg>
+              <span class="icon-arrow-right"></span>
             </button>
           </div>
         </div>
@@ -269,49 +247,29 @@
             <p class="accordion__head-title">
               Amet estibulum lobortis sed senectus
             </p>
-            <svg
-              class="accordion__minus-icon"
-              width="22"
-              height="4"
-              viewBox="0 0 22 4"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M21.4766 3.47656H0.523438V0.523438H21.4766V3.47656Z"
-                fill="#F05A28"
-              />
-            </svg>
-            <svg
-              class="accordion__plus-icon hidden"
-              width="22"
-              height="22"
-              viewBox="0 0 22 22"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M21.4766 12.4766H12.4766V21.4766H9.52344V12.4766H0.523438V9.52344H9.52344V0.523438H12.4766V9.52344H21.4766V12.4766Z"
-                fill="#F05A28"
-              />
-            </svg>
+            <span class="icon-minus"></span>
+            <span class="icon-plus hidden"></span>
           </button>
           <div class="accordion__body">
             <p class="accordion__desc">
               Egestas a mi vestibulum ullamcorper facilisi eget nam phasellus
               torquent gravida vestibulum ultrices elementum viverra lobortis
-              ultricies parturient a vestibulum facilisi dictumst mi dis
-              scelerisque risus mattis. Nam eleifend torquent penatibus vitae
-              morbi ad condimentum a ullamcorper aliquam donec bibendum placerat
-              suspendisse consectetur parturient at. Ut elementum vitae auctor
-              neque scelerisque nullam porta urna penatibus tempor montes nullam
-              pharetra tempus morbi non ullamcorper tempor libero a a erat.
-              Lacus ullamcorper vulputate ante nisi in ad dictumst fermentum
-              quam a odio nec scelerisque a adipiscing suspendisse donec
-              ultricies condimentum blandit tempor in eros vestibulum
-              vestibulum. Blandit a a interdum euismod vestibulum at consectetur
-              ac vulputate ullamcorper scelerisque mi hendrerit a est
-              scelerisque vestibulum condimentum.
+              ultricies parturient a
+              <a class="accordion__orange" href="#"
+                >vestibulum facilisi dictumst</a
+              >
+              mi dis scelerisque risus mattis. Nam eleifend torquent penatibus
+              vitae morbi ad condimentum a ullamcorper aliquam donec bibendum
+              placerat suspendisse consectetur parturient at. Ut elementum vitae
+              auctor neque scelerisque nullam porta urna penatibus tempor montes
+              nullam pharetra tempus morbi non ullamcorper tempor libero a a
+              erat. Lacus ullamcorper vulputate ante nisi in ad dictumst
+              fermentum quam a odio nec scelerisque a adipiscing suspendisse
+              donec ultricies condimentum
+              <a class="accordion__orange" href="#">blandit tempor</a> in eros
+              vestibulum vestibulum. Blandit a a interdum euismod vestibulum at
+              consectetur ac vulputate ullamcorper scelerisque mi hendrerit a
+              est scelerisque vestibulum condimentum.
             </p>
             <p class="accordion__desc">
               Eros adipiscing vestibulum parturient cum nibh justo vehicula
@@ -323,7 +281,177 @@
               bibendum.
             </p>
           </div>
+          <button class="btn accordion__head">
+            <p class="accordion__head-title">
+              Libero risus accumsan commodo scelerisque
+            </p>
+            <span class="icon-minus hidden"></span>
+            <span class="icon-plus"></span>
+          </button>
+          <div class="accordion__body">
+            <p class="accordion__desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus esse commodi iure. Voluptates odit enim id quae?
+              Error maiores accusantium explicabo dolorum beatae facere porro
+              alias eos eaque cupiditate ab illum natus, facilis nemo nostrum
+              saepe magnam nesciunt illo commodi animi minima tenetur odio rerum
+              sit! Ipsam inventore perspiciatis libero porro quasi, asperiores
+              quibusdam obcaecati, ut ipsum repellendus eligendi magni!
+            </p>
+            <p class="accordion__desc">
+              Eros adipiscing vestibulum parturient cum nibh justo vehicula
+              sodales a nostra condimentum adipiscing a in vulputate suspendisse
+              parturient ac a adipiscing scelerisque suspendisse cum enim sem.
+            </p>
+          </div>
+          <button class="btn accordion__head">
+            <p class="accordion__head-title">
+              Condimentum phasellus cras diam consectetur
+            </p>
+            <span class="icon-minus hidden"></span>
+            <span class="icon-plus"></span>
+          </button>
+          <div class="accordion__body">
+            <p class="accordion__desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+              velit laborum autem optio maiores soluta, tempora iusto quam ad
+              aspernatur ipsa facere voluptas! Facilis voluptatum omnis ducimus
+              provident labore, eum similique rerum ea delectus recusandae,
+              dignissimos, reprehenderit accusantium sapiente quod? Inventore
+              veniam saepe dicta exercitationem.
+            </p>
+            <p class="accordion__desc">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum
+              dolorem consequuntur perferendis quo nobis? Dolores aliquam
+              quibusdam aperiam voluptate officia.
+            </p>
+          </div>
         </div>
+      </section>
+
+      <section class="contact">
+        <h2 class="contact__title">Mauris libero odio</h2>
+
+        <form class="form">
+          <div class="form__items-box">
+            <div class="form__item">
+              <label class="form__label" for="first-name">First name*:</label>
+              <input
+                class="form__input"
+                name="first-name"
+                id="first-name"
+                type="text"
+                placeholder="First name"
+                required
+              />
+            </div>
+            <div class="form__item">
+              <label class="form__label" for="last-name">Last name*:</label>
+              <input
+                class="form__input"
+                name="last-name"
+                id="last-name"
+                type="text"
+                placeholder="Last name"
+                required
+              />
+            </div>
+            <div class="form__item">
+              <label class="form__label" for="company-name"
+                >Company name:</label
+              >
+              <input
+                class="form__input"
+                name="company-name"
+                id="company-name"
+                type="text"
+                placeholder="Company name"
+              />
+            </div>
+            <div class="form__item">
+              <label class="form__label" for="title">Title:</label>
+              <input
+                class="form__input"
+                name="title"
+                id="title"
+                type="text"
+                placeholder="Title"
+              />
+            </div>
+            <div class="form__item">
+              <label class="form__label" for="email">Email address*:</label>
+              <input
+                class="form__input"
+                name="email"
+                id="email"
+                type="email"
+                placeholder="Email address"
+                required
+              />
+            </div>
+            <div class="form__item">
+              <label class="form__label" for="phone">Phone:</label>
+              <input
+                class="form__input"
+                name="phone"
+                id="phone"
+                type="number"
+                placeholder="Phone"
+              />
+            </div>
+            <div class="form__item">
+              <label class="form__label" for="message">Your message*:</label>
+              <textarea
+                class="form__textarea"
+                name="message"
+                id="message"
+                placeholder="Your message..."
+                required
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="form__radio-buttons">
+            <div class="form__radio-button-box">
+              <input
+                class="form__radio"
+                type="radio"
+                name="radio"
+                id="first"
+                value="first"
+                checked
+              />
+              <label class="form__label" for="first"
+                >Pellentesque at vehicula lacus</label
+              >
+            </div>
+            <div class="form__radio-button-box">
+              <input
+                class="form__radio"
+                type="radio"
+                name="radio"
+                id="second"
+                value="second"
+              />
+              <label class="form__label" for="second"
+                >Pellentesque at vehicula lacus</label
+              >
+            </div>
+          </div>
+
+          <p class="form__desc">*Required fields.</p>
+
+          <button class="btn form__submit" type="submit">Submit</button>
+        </form>
+      </section>
+
+      <section class="footer">
+        <ul class="footer__list">
+          <li><a class="btn footer__link" href="#">Sitemap</a></li>
+          <li><a class="btn footer__link" href="#">Accessinility</a></li>
+          <li><a class="btn footer__link" href="#">Privacy policy</a></li>
+        </ul>
+        <p class="footer__copyright">&copy; Vega IT 2022</p>
       </section>
     </main>
 
