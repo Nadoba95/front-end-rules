@@ -1,9 +1,21 @@
 "use strict";
 import "./slider/slider.js";
 
+const overlay = document.querySelector(".overlay");
+const btnOverlaySearch = document.querySelector(".overlay__button-close");
+const btnHeaderSearch = document.querySelector(".header__button-search");
+
 const accordionItems = document.querySelectorAll(".accordion__head");
 const calendarYears = document.querySelectorAll(".calendar__year");
 const calendarTexts = document.querySelectorAll(".calendar__desc-box");
+
+function openModal() {
+  overlay.classList.remove("hidden");
+}
+
+function closeModal() {
+  overlay.classList.add("hidden");
+}
 
 function pickYear(e) {
   const selectedYear = e.currentTarget;
@@ -40,6 +52,8 @@ accordionItems[0].nextElementSibling.style.paddingBottom = "60px";
 accordionItems[0].nextElementSibling.style.maxHeight =
   accordionItems[0].nextElementSibling.scrollHeight + "px";
 
+btnHeaderSearch.addEventListener("click", openModal);
+btnOverlaySearch.addEventListener("click", closeModal);
 calendarYears.forEach((year) => year.addEventListener("click", pickYear));
 accordionItems.forEach((item) =>
   item.addEventListener("click", accordionDropdown)

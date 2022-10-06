@@ -31,7 +31,7 @@
   background-color: lighten($red, $amount: 10);
 }
 
-.btn--border {
+.btn--slider {
   @extend %button;
   border: 1px solid $brown;
   padding: 22px 29px;
@@ -39,6 +39,6 @@
   transition: $btns-transition-lenght;
 }
 
-.btn--border:hover {
+.btn--slider:hover {
   background-color: darken($silver, $amount: 5);
 }

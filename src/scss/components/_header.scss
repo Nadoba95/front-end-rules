@@ -21,6 +21,56 @@
   cursor: pointer;
 }
 
-.header > .btn {
+.header__button-search {
   padding-right: 20px;
+}
+
+.overlay {
+  background-color: $white;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 215px;
+
+  &.hidden {
+    display: none;
+  }
+}
+
+.overlay__button-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+
+.overlay__icon-close {
+  font-size: 23px;
+  color: $brown;
+}
+
+.overlay__input-search-box {
+  width: 100%;
+  display: flex;
+  border-bottom: 2px solid $acc-border;
+}
+
+.overlay__input,
+.overlay__input::placeholder {
+  font-family: $epilogue-family;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 36px;
+  color: $brown;
+}
+
+.overlay__input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 16px 30px;
 }

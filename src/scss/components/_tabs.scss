@@ -39,12 +39,17 @@
   background-color: $silver;
   border-radius: 5px;
   cursor: pointer;
+  transition: none;
+}
 
-  &.active {
-    background-color: $light-green;
-    color: $white;
-    font-weight: 700;
-  }
+.calendar__year:hover {
+  background-color: lighten($light-green, $amount: 20);
+}
+
+.calendar__year.active {
+  background-color: $light-green;
+  color: $white;
+  font-weight: 700;
 }
 
 .calendar__desc-box {

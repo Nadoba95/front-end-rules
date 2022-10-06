@@ -17,28 +17,36 @@
       <img class="header__logo" src="assets/images/Logo.jpg" alt="logo" />
       <nav class="header__nav">
         <ul class="header__list">
-          <li><a class="header__links" href="#">About us</a></li>
+          <li>
+            <button class="btn header__links" type="button">About us</button>
+          </li>
           <li><a class="header__links" href="#">Investors</a></li>
-          <li><a class="header__links" href="#">News & Media</a></li>
+          <li>
+            <button class="btn header__links" type="button">
+              News & Media
+            </button>
+          </li>
           <li><a class="header__links" href="#">Contact us</a></li>
         </ul>
       </nav>
-      <button class="btn">
+      <button class="btn header__button-search" type="button">
         <span class="icon-search"></span>
       </button>
-      <button class="btn hidden">
-        <span class="icon-menu"></span>
-        <span class="icon-close hidden"></span>
+      <button class="btn hidden" type="button">
+        <span class="icon-menu header__icon-menu"></span>
+        <span class="icon-close header__icon-close hidden"></span>
       </button>
 
-      <div class="header__overlay hidden">
-        <button class="btn">
-          <span class="icon-close"></span>
+      <div class="overlay hidden">
+        <button class="btn overlay__button-close" type="button">
+          <span class="icon-close overlay__icon-close"></span>
         </button>
-        <input class="header__input" type="text" placeholder="Search" />
-        <button class="btn">
-          <span class="icon-search"></span>
-        </button>
+        <div class="overlay__input-search-box">
+          <input class="overlay__input" type="text" placeholder="Search" />
+          <button class="btn" type="button">
+            <span class="icon-search"></span>
+          </button>
+        </div>
       </div>
     </header>
 
@@ -61,7 +69,7 @@
       </section>
 
       <section class="text-image">
-        <div class="text-image__card text-image__card--padding">
+        <div class="text-image__card">
           <h2 class="text-image__title">Suspendisse vitae purus quis dui</h2>
           <p class="text-image__desc">
             Nam a augue eu ipsum accumsan pretium. Proin ut dolor id arcu
@@ -70,14 +78,18 @@
           </p>
           <a class="btn btn--red" href="#">Fusce blandit</a>
         </div>
-        <img src="assets/images/selfie.png" alt="selfie" />
+        <img
+          class="text-image__image"
+          src="assets/images/selfie.png"
+          alt="selfie"
+        />
       </section>
 
-      <section class="cities">
-        <div class="cities__container">
-          <h2 class="cities__title">Sed ultricies lorem</h2>
-          <div class="slider">
-            <div class="slide">
+      <section class="slider">
+        <div class="slider__container">
+          <h2 class="slider__title">Sed ultricies lorem</h2>
+          <div class="slide-box">
+            <div class="slide slide--first">
               <img
                 class="slide__image"
                 src="assets/images/streets.png"
@@ -87,7 +99,29 @@
               <p class="slide__desc">Proin ullamcorper fermentum quam</p>
               <p class="slide__date">05 November 2021</p>
             </div>
-            <div class="slide">
+            <div class="slide slide--first">
+              <img
+                class="slide__image"
+                src="assets/images/buildings.png"
+                alt="strets"
+              />
+              <p class="slide__title">FEUGIAT</p>
+              <p class="slide__desc">
+                Quisque cursus ornare mi malesuada porttitor
+              </p>
+              <p class="slide__date">05 November 2021</p>
+            </div>
+            <div class="slide slide--first">
+              <img
+                class="slide__image"
+                src="assets/images/streets.png"
+                alt="strets"
+              />
+              <p class="slide__title">MAECENAS</p>
+              <p class="slide__desc">Proin ullamcorper fermentum quam</p>
+              <p class="slide__date">05 November 2021</p>
+            </div>
+            <div class="slide slide--first">
               <img
                 class="slide__image"
                 src="assets/images/buildings.png"
@@ -100,11 +134,17 @@
               <p class="slide__date">05 November 2021</p>
             </div>
           </div>
-          <div class="cities__arrows">
-            <button class="btn btn--border">
+          <div class="slider__arrows">
+            <button
+              class="btn btn--slider slider__button-left-first"
+              type="button"
+            >
               <span class="icon-arrow-left"></span>
             </button>
-            <button class="btn btn--border">
+            <button
+              class="btn btn--slider slider__button-right-first"
+              type="button"
+            >
               <span class="icon-arrow-right"></span>
             </button>
           </div>
@@ -116,10 +156,22 @@
           <h2 class="tabs__title">Turpis eu ultrices porttitor</h2>
           <div class="calendar">
             <div class="calendar__years">
-              <div class="calendar__year active" data-year="0">2021</div>
-              <div class="calendar__year" data-year="1">2020</div>
-              <div class="calendar__year" data-year="2">2019</div>
-              <div class="calendar__year" data-year="3">2018</div>
+              <button
+                class="btn calendar__year active"
+                type="button"
+                data-year="0"
+              >
+                2021
+              </button>
+              <button class="btn calendar__year" type="button" data-year="1">
+                2020
+              </button>
+              <button class="btn calendar__year" type="button" data-year="2">
+                2019
+              </button>
+              <button class="btn calendar__year" type="button" data-year="3">
+                2018
+              </button>
             </div>
 
             <div class="calendar__desc-box">
@@ -190,7 +242,11 @@
       </section>
 
       <section class="text-image text-image--reverse">
-        <img src="assets/images/books.png" alt="books" />
+        <img
+          class="text-image__image"
+          src="assets/images/books.png"
+          alt="books"
+        />
         <div class="text-image__card">
           <h3 class="text-image__title">Proin pretium vehicula</h3>
           <p class="text-image__desc">
@@ -202,11 +258,11 @@
         </div>
       </section>
 
-      <section class="food">
-        <div class="food__container">
-          <h2 class="food__title">Elit vel massa accumsan lacinia</h2>
-          <div class="slider">
-            <div class="slide">
+      <section class="slider">
+        <div class="slider__container">
+          <h2 class="slider__title">Elit vel massa accumsan lacinia</h2>
+          <div class="slide-box">
+            <div class="slide slide--second">
               <img
                 class="slide__image"
                 src="assets/images/food-1.png"
@@ -218,7 +274,29 @@
               </p>
               <p class="slide__date">05 November 2021</p>
             </div>
-            <div class="slide">
+            <div class="slide slide--second">
+              <img
+                class="slide__image"
+                src="assets/images/food-2.png"
+                alt="strets"
+              />
+              <p class="slide__title">ULLAMCORPER</p>
+              <p class="slide__desc">Etiam vulputate ipsum massa</p>
+              <p class="slide__date">05 November 2021</p>
+            </div>
+            <div class="slide slide--second">
+              <img
+                class="slide__image"
+                src="assets/images/food-1.png"
+                alt="strets"
+              />
+              <p class="slide__title">PHASELLUS</p>
+              <p class="slide__desc">
+                Aliquam egestas finibus massa vitae sollicitudin
+              </p>
+              <p class="slide__date">05 November 2021</p>
+            </div>
+            <div class="slide slide--second">
               <img
                 class="slide__image"
                 src="assets/images/food-2.png"
@@ -229,11 +307,17 @@
               <p class="slide__date">05 November 2021</p>
             </div>
           </div>
-          <div class="food__arrows">
-            <button class="btn btn--border">
+          <div class="slider__arrows">
+            <button
+              class="btn btn--slider slider__button-left-second"
+              type="button"
+            >
               <span class="icon-arrow-left"></span>
             </button>
-            <button class="btn btn--border">
+            <button
+              class="btn btn--slider slider__button-right-second"
+              type="button"
+            >
               <span class="icon-arrow-right"></span>
             </button>
           </div>
@@ -243,7 +327,7 @@
       <section class="accordion">
         <div class="accordion__container">
           <h2 class="accordion__title">Mauris libero odio</h2>
-          <button class="btn accordion__head active">
+          <button class="btn accordion__head active" type="button">
             <p class="accordion__head-title">
               Amet estibulum lobortis sed senectus
             </p>
@@ -281,7 +365,7 @@
               bibendum.
             </p>
           </div>
-          <button class="btn accordion__head">
+          <button class="btn accordion__head" type="button">
             <p class="accordion__head-title">
               Libero risus accumsan commodo scelerisque
             </p>
@@ -304,7 +388,7 @@
               parturient ac a adipiscing scelerisque suspendisse cum enim sem.
             </p>
           </div>
-          <button class="btn accordion__head">
+          <button class="btn accordion__head" type="button">
             <p class="accordion__head-title">
               Condimentum phasellus cras diam consectetur
             </p>
@@ -438,9 +522,7 @@
               >
             </div>
           </div>
-
           <p class="form__desc">*Required fields.</p>
-
           <button class="btn form__submit" type="submit">Submit</button>
         </form>
       </section>

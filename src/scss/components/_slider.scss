@@ -1,34 +1,39 @@
-.cities,
-.food {
+.slider {
   background-color: $silver;
   padding: 70px 20px;
 }
 
-.cities__container,
-.food__container {
-  width: fit-content;
+.slider__container {
+  width: clamp(250px, 100%, 1230px);
   display: flex;
   flex-direction: column;
   gap: 30px;
   margin: 0 auto;
 }
 
-.cities__title,
-.food__title {
+.slider__title {
   font-size: 40px;
   font-weight: 700;
   line-height: 50px;
   color: $dark-green;
 }
 
-.slider {
+.slide-box {
   display: flex;
   gap: 70px;
+  overflow: hidden;
+}
+
+.slide {
+  transition: transform 0.3s;
 }
 
 .slide__image {
   width: 580px;
   height: 350px;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 40px;
 }
 
 .slide__title {
@@ -36,7 +41,7 @@
   line-height: 16px;
   letter-spacing: 3px;
   color: $red;
-  padding-top: 40px;
+  margin-bottom: 20px;
 }
 
 .slide__desc {
@@ -44,16 +49,14 @@
   font-size: 26px;
   font-weight: 700;
   line-height: 34px;
-  padding-top: 20px;
+  margin-bottom: 20px;
 }
 
 .slide__date {
   line-height: 16px;
-  padding-top: 20px;
 }
 
-.cities__arrows,
-.food__arrows {
+.slider__arrows {
   display: flex;
   gap: 10px;
 }
