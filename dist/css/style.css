@@ -133,8 +133,8 @@ iconfont Webfont
 */
 @font-face {
   font-family: 'iconfont';
-  src: url("../fonts/iconfont.eot?1664912199954");
-  src: url("../fonts/iconfont.eot?#iefix-1664912199954") format("embedded-opentype"), url("../fonts/iconfont.woff2?1664912199954") format("woff2"), url("../fonts/iconfont.woff?1664912199954") format("woff"), url("../fonts/iconfont.ttf?1664912199954") format("truetype");
+  src: url("../fonts/iconfont.eot?1665153593591");
+  src: url("../fonts/iconfont.eot?#iefix-1665153593591") format("embedded-opentype"), url("../fonts/iconfont.woff2?1665153593591") format("woff2"), url("../fonts/iconfont.woff?1665153593591") format("woff"), url("../fonts/iconfont.ttf?1665153593591") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
@@ -191,10 +191,6 @@ body {
 
 .hidden {
   display: none; }
-
-.icon-search {
-  font-size: 43px;
-  color: #f05a28; }
 
 .icon-arrow-right,
 .icon-arrow-left {
@@ -264,13 +260,35 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 0 215px; }
+  @media (max-width: 1200px) {
+    .header {
+      display: grid;
+      grid-template-columns: auto auto;
+      padding: 10px 0; } }
+
+@media (max-width: 1200px) {
+  .header__logo {
+    width: 60px;
+    height: 60px;
+    justify-self: start;
+    margin-bottom: 10px;
+    position: relative;
+    left: 20px; } }
+
+@media (max-width: 1200px) {
+  .header__nav {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    border-top: 2px solid #f1f1f1;
+    padding: 0 20px;
+    min-height: 900px; } }
 
 .header__list {
   display: -webkit-box;
@@ -279,9 +297,25 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+  @media (max-width: 1200px) {
+    .header__list {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start; } }
 
 .header__dropdown {
   position: relative; }
+
+@media (max-width: 1200px) {
+  .header__wrapper {
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: max-height 0.4s ease-out;
+    transition: max-height 0.4s ease-out; } }
 
 .header__links-box {
   background-color: #fff;
@@ -290,10 +324,26 @@ body {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   display: none;
-  gap: 30px;
   border-radius: 10px;
   padding: 40px 65px;
   z-index: 99; }
+  @media (max-width: 1200px) {
+    .header__links-box {
+      position: relative;
+      left: 0;
+      -webkit-transform: none;
+              transform: none;
+      border-radius: none;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      gap: 22px;
+      z-index: 0;
+      padding: 28px 40px 0 40px; } }
 
 .header__links-box::before {
   content: "";
@@ -301,6 +351,9 @@ body {
   top: -30px;
   border: 11px solid transparent;
   border-bottom: 19px solid #fff; }
+  @media (max-width: 1200px) {
+    .header__links-box::before {
+      display: none; } }
 
 .header__link,
 .header__dropdown-button {
@@ -312,12 +365,41 @@ body {
   white-space: nowrap;
   padding: 70px 15px 69px 15px;
   cursor: pointer; }
+  @media (max-width: 1200px) {
+    .header__link,
+    .header__dropdown-button {
+      width: 100%;
+      padding: 0; } }
 
 .header__link:hover,
 .header__dropdown-button:hover {
-  background-color: #f1f1f1; }
+  background-color: #f1f1f1;
+  color: #666666; }
+  @media (max-width: 1200px) {
+    .header__link:hover,
+    .header__dropdown-button:hover {
+      background-color: transparent; } }
 
-.header__dropdown:hover .header__links-box {
+@media (max-width: 1200px) {
+  .header__dropdown-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; } }
+
+@media (max-width: 1200px) {
+  .header__list-item {
+    width: 100%;
+    border-top: 1px solid #f1f1f1;
+    padding: 30px 20px 26px 20px; } }
+
+@media (max-width: 1200px) {
+  .header__list-item:last-child {
+    border-bottom: 1px solid #f1f1f1; } }
+
+.header__dropdown.hover:hover .header__links-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -328,6 +410,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  gap: 30px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
@@ -344,8 +427,55 @@ body {
 .header__mini-link:hover {
   color: #575756; }
 
+@media (max-width: 1200px) {
+  .header__buttons-box {
+    justify-self: end;
+    position: relative;
+    right: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 25px; } }
+
 .header__button-search {
   padding-right: 20px; }
+  @media (max-width: 1200px) {
+    .header__button-search {
+      padding-right: 0; } }
+
+.header__button-menu {
+  display: none;
+  font-size: 20px; }
+  .header__button-menu.hidden {
+    display: none; }
+  @media (max-width: 1200px) {
+    .header__button-menu {
+      display: block; } }
+
+.header__button-close {
+  font-size: 25px; }
+
+.icon-show-less-arrow,
+.icon-show-more-arrow {
+  display: none;
+  color: #f05a28; }
+  .icon-show-less-arrow.hidden,
+  .icon-show-more-arrow.hidden {
+    display: none; }
+  @media (max-width: 1200px) {
+    .icon-show-less-arrow,
+    .icon-show-more-arrow {
+      display: block; } }
+
+.icon-search {
+  font-size: 43px;
+  color: #f05a28; }
+  @media (max-width: 1200px) {
+    .icon-search {
+      font-size: 32px; } }
+
+.icon-show-less-arrow {
+  font-size: 13px; }
 
 .overlay {
   background-color: #fff;
@@ -685,6 +815,9 @@ body {
   overflow: hidden;
   -webkit-transition: max-height 0.4s ease-out;
   transition: max-height 0.4s ease-out; }
+
+.accordion__desc-box {
+  margin-bottom: 60px; }
 
 .accordion__desc {
   line-height: 28px; }

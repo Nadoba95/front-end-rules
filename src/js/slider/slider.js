@@ -12,7 +12,12 @@ const maxSlide1 = slides1.length - 1;
 const maxSlide2 = slides2.length - 1;
 
 function goToSlide(slides, slide) {
-  slides.forEach((s) => (s.style.transform = `translateX(${-100 * slide}%)`));
+  slides.forEach(
+    (s) =>
+      (s.style.transform = `translateX(calc(${-100 * slide}% + ${
+        -slide * 70
+      }px))`)
+  );
 }
 
 function nextSlide1() {

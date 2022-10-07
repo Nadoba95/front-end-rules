@@ -1,13 +1,18 @@
 "use strict";
 import "./slider/slider.js";
+import "./dropdown/dropdown.js";
 
-const overlay = document.querySelector(".overlay");
-const btnOverlaySearch = document.querySelector(".overlay__button-close");
-const btnHeaderSearch = document.querySelector(".header__button-search");
+const headerDropdownsHover = document.querySelectorAll(".js-header-dropdown");
 
-const accordionItems = document.querySelectorAll(".accordion__head");
-const calendarYears = document.querySelectorAll(".calendar__year");
-const calendarTexts = document.querySelectorAll(".calendar__desc-box");
+const nav = document.querySelector("js-header-nav");
+const overlay = document.querySelector(".js-overlay");
+const btnHeaderSearch = document.querySelector(".js-header-button-search");
+const btnHeaderMenu = document.querySelector(".js-header-button-menu");
+const btnHeaderClose = document.querySelector(".js-header-button-close");
+const btnOverlaySearch = document.querySelector(".js-overlay-button-close");
+
+const calendarYears = document.querySelectorAll(".js-calendar-tab");
+const calendarTexts = document.querySelectorAll(".js-calendar-desc-box");
 
 function openModal() {
   overlay.classList.remove("hidden");
@@ -17,8 +22,22 @@ function closeModal() {
   overlay.classList.add("hidden");
 }
 
-function pickYear(e) {
-  const selectedYear = e.currentTarget;
+function openMenu() {
+  this.classList.remove("hidden");
+  btnHeaderSearch.classList.add("hidden");
+  btnHeaderClose.classList.remove("hidden");
+  nav.classList.remove("hidden");
+}
+
+function closeMenu() {
+  this.classList.add("hidden");
+  btnHeaderSearch.classList.remove("hidden");
+  btnHeaderMenu.classList.remove("hidden");
+  nav.classList.add("hidden");
+}
+
+function pickYear() {
+  const selectedYear = this;
 
   calendarYears.forEach((year) => year.classList.remove("active"));
   selectedYear.classList.add("active");
@@ -27,34 +46,12 @@ function pickYear(e) {
   calendarTexts[selectedYear.dataset.year].classList.remove("hidden");
 }
 
-function accordionDropdown(e) {
-  const accordionItem = e.currentTarget;
-  const accordionBody = accordionItem.nextElementSibling;
-  const plusIcon = accordionItem.querySelector(".icon-plus");
-  const minusIcon = accordionItem.querySelector(".icon-minus");
-
-  accordionItem.classList.toggle("active");
-
-  if (accordionItem.classList.contains("active")) {
-    accordionBody.style.paddingBottom = "60px";
-    accordionBody.style.maxHeight = accordionBody.scrollHeight + "px";
-    plusIcon.classList.add("hidden");
-    minusIcon.classList.remove("hidden");
-  } else {
-    accordionBody.style.paddingBottom = null;
-    accordionBody.style.maxHeight = null;
-    plusIcon.classList.remove("hidden");
-    minusIcon.classList.add("hidden");
-  }
+if (innerWidth > 1200) {
+  headerDropdownsHover.forEach((dropdown) => dropdown.classList.add("hover"));
 }
-
-accordionItems[0].nextElementSibling.style.paddingBottom = "60px";
-accordionItems[0].nextElementSibling.style.maxHeight =
-  accordionItems[0].nextElementSibling.scrollHeight + "px";
 
 btnHeaderSearch.addEventListener("click", openModal);
 btnOverlaySearch.addEventListener("click", closeModal);
 calendarYears.forEach((year) => year.addEventListener("click", pickYear));
-accordionItems.forEach((item) =>
-  item.addEventListener("click", accordionDropdown)
-);
+btnHeaderMenu.addEventListener("click", openMenu);
+btnHeaderClose.addEventListener("click", closeMenu);

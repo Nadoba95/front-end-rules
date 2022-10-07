@@ -43,6 +43,10 @@
   transition: max-height $dropdown-duration ease-out;
 }
 
+.accordion__desc-box {
+  margin-bottom: 60px;
+}
+
 .accordion__desc {
   line-height: 28px;
 }

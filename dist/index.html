@@ -15,44 +15,81 @@
   <body>
     <header class="header">
       <img class="header__logo" src="assets/images/Logo.jpg" alt="logo" />
-      <nav class="header__nav">
+      <nav class="header__nav js-header-nav hidden">
         <ul class="header__list">
-          <li class="header__dropdown">
-            <button class="btn header__dropdown-button" type="button">
+          <li class="header__list-item header__dropdown js-header-dropdown">
+            <button
+              class="btn header__dropdown-button js-header-dropdown-button"
+              type="button"
+            >
               About us
+              <span class="icon-show-more-arrow"></span>
+              <span class="icon-show-less-arrow hidden"></span>
             </button>
-            <div class="header__links-box">
-              <a href="#" class="header__mini-link">Our company</a
-              ><a href="#" class="header__mini-link">Our people</a
-              ><a href="#" class="header__mini-link">Policy & Regulation</a
-              ><a href="#" class="header__mini-link">Our sponsorship</a
-              ><a href="#" class="header__mini-link">Our history</a>
+            <div class="header__wrapper">
+              <div class="header__links-box">
+                <a href="#" class="header__mini-link">Our company</a
+                ><a href="#" class="header__mini-link">Our people</a
+                ><a href="#" class="header__mini-link">Policy & Regulation</a
+                ><a href="#" class="header__mini-link">Our sponsorship</a
+                ><a href="#" class="header__mini-link">Our history</a>
+              </div>
             </div>
           </li>
-          <li><a class="header__link" href="#">Investors</a></li>
-          <li class="header__dropdown">
-            <button class="btn header__dropdown-button" type="button">
+          <li class="header__list-item">
+            <a class="header__link" href="#">Investors</a>
+          </li>
+          <li class="header__list-item header__dropdown js-header-dropdown">
+            <button
+              class="btn header__dropdown-button js-header-dropdown-button"
+              type="button"
+            >
               News & Media
+              <span class="icon-show-more-arrow"></span>
+              <span class="icon-show-less-arrow hidden"></span>
             </button>
-            <div class="header__links-box">
-              <a href="#" class="header__mini-link">News releases</a
-              ><a href="#" class="header__mini-link">Blog</a
-              ><a href="#" class="header__mini-link">Image library</a>
+            <div class="header__wrapper">
+              <div class="header__links-box">
+                <a href="#" class="header__mini-link">News releases</a
+                ><a href="#" class="header__mini-link">Blog</a
+                ><a href="#" class="header__mini-link">Image library</a>
+              </div>
             </div>
           </li>
-          <li><a class="header__link" href="#">Contact us</a></li>
+          <li class="header__list-item">
+            <a class="header__link" href="#">Contact us </a>
+          </li>
         </ul>
       </nav>
-      <button class="btn header__button-search" type="button">
-        <span class="icon-search"></span>
-      </button>
-      <button class="btn hidden" type="button">
-        <span class="icon-menu header__icon-menu"></span>
-        <span class="icon-close header__icon-close hidden"></span>
-      </button>
 
-      <div class="overlay hidden">
-        <button class="btn overlay__button-close" type="button">
+      <div class="header__buttons-box">
+        <button
+          class="btn header__button-search js-header-button-search"
+          type="button"
+        >
+          <span class="icon-search header__icon-search"></span>
+        </button>
+
+        <button
+          class="btn header__button-menu js-header-button-menu"
+          type="button"
+        >
+          <span class="icon-menu header__icon-menu"></span>
+        </button>
+
+        <button
+          class="btn header__button-close js-header-button-close hidden"
+          type="button"
+        >
+          <span class="icon-close header__icon-close"></span>
+        </button>
+      </div>
+
+      <div class="overlay js-overlay hidden">
+        <button
+          class="btn overlay__button-close js-overlay-button-close"
+          type="button"
+        >
           <span class="icon-close overlay__icon-close"></span>
         </button>
         <div class="overlay__input-search-box">
@@ -171,24 +208,36 @@
           <div class="calendar">
             <div class="calendar__years">
               <button
-                class="btn calendar__year active"
+                class="btn calendar__year js-calendar-tab active"
                 type="button"
                 data-year="0"
               >
                 2021
               </button>
-              <button class="btn calendar__year" type="button" data-year="1">
+              <button
+                class="btn calendar__year js-calendar-tab"
+                type="button"
+                data-year="1"
+              >
                 2020
               </button>
-              <button class="btn calendar__year" type="button" data-year="2">
+              <button
+                class="btn calendar__year js-calendar-tab"
+                type="button"
+                data-year="2"
+              >
                 2019
               </button>
-              <button class="btn calendar__year" type="button" data-year="3">
+              <button
+                class="btn calendar__year js-calendar-tab"
+                type="button"
+                data-year="3"
+              >
                 2018
               </button>
             </div>
 
-            <div class="calendar__desc-box">
+            <div class="calendar__desc-box js-calendar-desc-box">
               <p class="calendar__desc">
                 Proin pretium vehicula sagittis. Donec eget orci eget nunc
                 vulputate pharetra semper feugiat orci. Phasellus pharetra dui
@@ -205,7 +254,7 @@
                 Pellentesque at vehicula lacus.
               </p>
             </div>
-            <div class="calendar__desc-box hidden">
+            <div class="calendar__desc-box js-calendar-desc-box hidden">
               <p class="calendar__desc">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam
                 repudiandae voluptatem ratione ducimus odio. Debitis ducimus
@@ -220,7 +269,7 @@
                 facere quas.
               </p>
             </div>
-            <div class="calendar__desc-box hidden">
+            <div class="calendar__desc-box js-calendar-desc-box hidden">
               <p class="calendar__desc">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Deleniti illo vitae nesciunt consequatur, nostrum tenetur
@@ -238,7 +287,7 @@
                 quia quos nam hic temporibus similique!
               </p>
             </div>
-            <div class="calendar__desc-box hidden">
+            <div class="calendar__desc-box js-calendar-desc-box hidden">
               <p class="calendar__desc">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Impedit dolore officiis quod vel! Deleniti provident suscipit
@@ -341,7 +390,10 @@
       <section class="accordion">
         <div class="accordion__container">
           <h2 class="accordion__title">Mauris libero odio</h2>
-          <button class="btn accordion__head active" type="button">
+          <button
+            class="btn accordion__head js-accordion-button active"
+            type="button"
+          >
             <p class="accordion__head-title">
               Amet estibulum lobortis sed senectus
             </p>
@@ -349,37 +401,39 @@
             <span class="icon-plus hidden"></span>
           </button>
           <div class="accordion__body">
-            <p class="accordion__desc">
-              Egestas a mi vestibulum ullamcorper facilisi eget nam phasellus
-              torquent gravida vestibulum ultrices elementum viverra lobortis
-              ultricies parturient a
-              <a class="accordion__orange" href="#"
-                >vestibulum facilisi dictumst</a
-              >
-              mi dis scelerisque risus mattis. Nam eleifend torquent penatibus
-              vitae morbi ad condimentum a ullamcorper aliquam donec bibendum
-              placerat suspendisse consectetur parturient at. Ut elementum vitae
-              auctor neque scelerisque nullam porta urna penatibus tempor montes
-              nullam pharetra tempus morbi non ullamcorper tempor libero a a
-              erat. Lacus ullamcorper vulputate ante nisi in ad dictumst
-              fermentum quam a odio nec scelerisque a adipiscing suspendisse
-              donec ultricies condimentum
-              <a class="accordion__orange" href="#">blandit tempor</a> in eros
-              vestibulum vestibulum. Blandit a a interdum euismod vestibulum at
-              consectetur ac vulputate ullamcorper scelerisque mi hendrerit a
-              est scelerisque vestibulum condimentum.
-            </p>
-            <p class="accordion__desc">
-              Eros adipiscing vestibulum parturient cum nibh justo vehicula
-              sodales a nostra condimentum adipiscing a in vulputate suspendisse
-              parturient ac a adipiscing scelerisque suspendisse cum enim sem. A
-              eget parturient posuere taciti adipiscing sed a vestibulum augue
-              suspendisse ac dui primis suscipit ullamcorper ullamcorper nunc
-              sit augue adipiscing facilisis pretium senectus condimentum
-              bibendum.
-            </p>
+            <div class="accordion__desc-box">
+              <p class="accordion__desc">
+                Egestas a mi vestibulum ullamcorper facilisi eget nam phasellus
+                torquent gravida vestibulum ultrices elementum viverra lobortis
+                ultricies parturient a
+                <a class="accordion__orange" href="#"
+                  >vestibulum facilisi dictumst</a
+                >
+                mi dis scelerisque risus mattis. Nam eleifend torquent penatibus
+                vitae morbi ad condimentum a ullamcorper aliquam donec bibendum
+                placerat suspendisse consectetur parturient at. Ut elementum
+                vitae auctor neque scelerisque nullam porta urna penatibus
+                tempor montes nullam pharetra tempus morbi non ullamcorper
+                tempor libero a a erat. Lacus ullamcorper vulputate ante nisi in
+                ad dictumst fermentum quam a odio nec scelerisque a adipiscing
+                suspendisse donec ultricies condimentum
+                <a class="accordion__orange" href="#">blandit tempor</a> in eros
+                vestibulum vestibulum. Blandit a a interdum euismod vestibulum
+                at consectetur ac vulputate ullamcorper scelerisque mi hendrerit
+                a est scelerisque vestibulum condimentum.
+              </p>
+              <p class="accordion__desc">
+                Eros adipiscing vestibulum parturient cum nibh justo vehicula
+                sodales a nostra condimentum adipiscing a in vulputate
+                suspendisse parturient ac a adipiscing scelerisque suspendisse
+                cum enim sem. A eget parturient posuere taciti adipiscing sed a
+                vestibulum augue suspendisse ac dui primis suscipit ullamcorper
+                ullamcorper nunc sit augue adipiscing facilisis pretium senectus
+                condimentum bibendum.
+              </p>
+            </div>
           </div>
-          <button class="btn accordion__head" type="button">
+          <button class="btn accordion__head js-accordion-button" type="button">
             <p class="accordion__head-title">
               Libero risus accumsan commodo scelerisque
             </p>
@@ -387,22 +441,26 @@
             <span class="icon-plus"></span>
           </button>
           <div class="accordion__body">
-            <p class="accordion__desc">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatibus esse commodi iure. Voluptates odit enim id quae?
-              Error maiores accusantium explicabo dolorum beatae facere porro
-              alias eos eaque cupiditate ab illum natus, facilis nemo nostrum
-              saepe magnam nesciunt illo commodi animi minima tenetur odio rerum
-              sit! Ipsam inventore perspiciatis libero porro quasi, asperiores
-              quibusdam obcaecati, ut ipsum repellendus eligendi magni!
-            </p>
-            <p class="accordion__desc">
-              Eros adipiscing vestibulum parturient cum nibh justo vehicula
-              sodales a nostra condimentum adipiscing a in vulputate suspendisse
-              parturient ac a adipiscing scelerisque suspendisse cum enim sem.
-            </p>
+            <div class="accordion__desc-box">
+              <p class="accordion__desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatibus esse commodi iure. Voluptates odit enim id quae?
+                Error maiores accusantium explicabo dolorum beatae facere porro
+                alias eos eaque cupiditate ab illum natus, facilis nemo nostrum
+                saepe magnam nesciunt illo commodi animi minima tenetur odio
+                rerum sit! Ipsam inventore perspiciatis libero porro quasi,
+                asperiores quibusdam obcaecati, ut ipsum repellendus eligendi
+                magni!
+              </p>
+              <p class="accordion__desc">
+                Eros adipiscing vestibulum parturient cum nibh justo vehicula
+                sodales a nostra condimentum adipiscing a in vulputate
+                suspendisse parturient ac a adipiscing scelerisque suspendisse
+                cum enim sem.
+              </p>
+            </div>
           </div>
-          <button class="btn accordion__head" type="button">
+          <button class="btn accordion__head js-accordion-button" type="button">
             <p class="accordion__head-title">
               Condimentum phasellus cras diam consectetur
             </p>
@@ -410,19 +468,21 @@
             <span class="icon-plus"></span>
           </button>
           <div class="accordion__body">
-            <p class="accordion__desc">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-              velit laborum autem optio maiores soluta, tempora iusto quam ad
-              aspernatur ipsa facere voluptas! Facilis voluptatum omnis ducimus
-              provident labore, eum similique rerum ea delectus recusandae,
-              dignissimos, reprehenderit accusantium sapiente quod? Inventore
-              veniam saepe dicta exercitationem.
-            </p>
-            <p class="accordion__desc">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum
-              dolorem consequuntur perferendis quo nobis? Dolores aliquam
-              quibusdam aperiam voluptate officia.
-            </p>
+            <div class="accordion__desc-box">
+              <p class="accordion__desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quibusdam velit laborum autem optio maiores soluta, tempora
+                iusto quam ad aspernatur ipsa facere voluptas! Facilis
+                voluptatum omnis ducimus provident labore, eum similique rerum
+                ea delectus recusandae, dignissimos, reprehenderit accusantium
+                sapiente quod? Inventore veniam saepe dicta exercitationem.
+              </p>
+              <p class="accordion__desc">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Laborum dolorem consequuntur perferendis quo nobis? Dolores
+                aliquam quibusdam aperiam voluptate officia.
+              </p>
+            </div>
           </div>
         </div>
       </section>
