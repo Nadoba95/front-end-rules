@@ -5,10 +5,6 @@
   padding: 0 215px;
 }
 
-.header__nav {
-  height: 100%;
-}
-
 .header__list {
   display: flex;
   align-items: center;
@@ -40,14 +36,13 @@
 
 .header__link,
 .header__dropdown-button {
-  height: 160px;
   font-size: 20px;
   font-weight: 600;
   line-height: 21px;
   color: $black;
   text-decoration: none;
   white-space: nowrap;
-  padding: 0 15px;
+  padding: 70px 15px 69px 15px;
   cursor: pointer;
 }
 

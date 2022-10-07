@@ -272,9 +272,6 @@ body {
           align-items: center;
   padding: 0 215px; }
 
-.header__nav {
-  height: 100%; }
-
 .header__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -307,14 +304,13 @@ body {
 
 .header__link,
 .header__dropdown-button {
-  height: 160px;
   font-size: 20px;
   font-weight: 600;
   line-height: 21px;
   color: #000;
   text-decoration: none;
   white-space: nowrap;
-  padding: 0 15px;
+  padding: 70px 15px 69px 15px;
   cursor: pointer; }
 
 .header__link:hover,
