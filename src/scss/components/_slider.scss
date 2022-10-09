@@ -1,6 +1,10 @@
 .slider {
   background-color: $silver;
   padding: 70px 20px;
+
+  @include breakpoint($tablet) {
+    padding: 50px 20px;
+  }
 }
 
 .slider__container {
@@ -16,12 +20,21 @@
   font-weight: 700;
   line-height: 50px;
   color: $dark-green;
+
+  @include breakpoint($tablet) {
+    font-size: 30px;
+    line-height: 40px;
+  }
 }
 
 .slide-box {
   display: flex;
   gap: 70px;
   overflow: hidden;
+
+  @include breakpoint($tablet) {
+    gap: 28px;
+  }
 }
 
 .slide {
@@ -34,6 +47,12 @@
   background-position: center;
   background-size: cover;
   margin-bottom: 40px;
+
+  @include breakpoint($tablet) {
+    width: 350px;
+    height: auto;
+    border-radius: 15px;
+  }
 }
 
 .slide__title {
@@ -50,6 +69,12 @@
   font-weight: 700;
   line-height: 34px;
   margin-bottom: 20px;
+  color: $brown;
+
+  @include breakpoint($tablet) {
+    font-size: 22px;
+    line-height: 30px;
+  }
 }
 
 .slide__date {

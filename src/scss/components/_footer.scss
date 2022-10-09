@@ -5,6 +5,10 @@
   font-size: 15px;
   line-height: 30px;
   padding: 20px 215px;
+
+  @include breakpoint($tablet) {
+    padding: 20px;
+  }
 }
 
 .footer__list {
@@ -19,4 +23,8 @@
 
 .footer__link:hover {
   color: $black;
+}
+
+.footer__copyright {
+  font-size: 14px;
 }

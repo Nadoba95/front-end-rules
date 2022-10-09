@@ -15,7 +15,7 @@
   <body>
     <header class="header">
       <img class="header__logo" src="assets/images/Logo.jpg" alt="logo" />
-      <nav class="header__nav js-header-nav hidden">
+      <nav class="header__nav js-header-nav">
         <ul class="header__list">
           <li class="header__list-item header__dropdown js-header-dropdown">
             <button
@@ -61,22 +61,19 @@
           </li>
         </ul>
       </nav>
-
       <div class="header__buttons-box">
         <button
           class="btn header__button-search js-header-button-search"
           type="button"
         >
-          <span class="icon-search header__icon-search"></span>
+          <span class="icon-search"></span>
         </button>
-
         <button
           class="btn header__button-menu js-header-button-menu"
           type="button"
         >
           <span class="icon-menu header__icon-menu"></span>
         </button>
-
         <button
           class="btn header__button-close js-header-button-close hidden"
           type="button"
@@ -94,7 +91,7 @@
         </button>
         <div class="overlay__input-search-box">
           <input class="overlay__input" type="text" placeholder="Search" />
-          <button class="btn" type="button">
+          <button class="btn overlay__button-search" type="button">
             <span class="icon-search"></span>
           </button>
         </div>
@@ -119,7 +116,7 @@
         </div>
       </section>
 
-      <section class="text-image">
+      <section class="text-image text-image--reverse">
         <div class="text-image__card">
           <h2 class="text-image__title">Suspendisse vitae purus quis dui</h2>
           <p class="text-image__desc">
@@ -136,11 +133,11 @@
         />
       </section>
 
-      <section class="slider">
+      <section class="slider js-slider">
         <div class="slider__container">
           <h2 class="slider__title">Sed ultricies lorem</h2>
           <div class="slide-box">
-            <div class="slide slide--first">
+            <div class="slide js-slide">
               <img
                 class="slide__image"
                 src="assets/images/streets.png"
@@ -150,7 +147,7 @@
               <p class="slide__desc">Proin ullamcorper fermentum quam</p>
               <p class="slide__date">05 November 2021</p>
             </div>
-            <div class="slide slide--first">
+            <div class="slide js-slide">
               <img
                 class="slide__image"
                 src="assets/images/buildings.png"
@@ -162,7 +159,7 @@
               </p>
               <p class="slide__date">05 November 2021</p>
             </div>
-            <div class="slide slide--first">
+            <div class="slide js-slide">
               <img
                 class="slide__image"
                 src="assets/images/streets.png"
@@ -172,7 +169,7 @@
               <p class="slide__desc">Proin ullamcorper fermentum quam</p>
               <p class="slide__date">05 November 2021</p>
             </div>
-            <div class="slide slide--first">
+            <div class="slide js-slide">
               <img
                 class="slide__image"
                 src="assets/images/buildings.png"
@@ -186,14 +183,11 @@
             </div>
           </div>
           <div class="slider__arrows">
-            <button
-              class="btn btn--slider slider__button-left-first"
-              type="button"
-            >
+            <button class="btn btn--slider js-slider-button-left" type="button">
               <span class="icon-arrow-left"></span>
             </button>
             <button
-              class="btn btn--slider slider__button-right-first"
+              class="btn btn--slider js-slider-button-right"
               type="button"
             >
               <span class="icon-arrow-right"></span>
@@ -304,7 +298,7 @@
         </div>
       </section>
 
-      <section class="text-image text-image--reverse">
+      <section class="text-image">
         <img
           class="text-image__image"
           src="assets/images/books.png"
@@ -321,11 +315,11 @@
         </div>
       </section>
 
-      <section class="slider">
+      <section class="slider js-slider">
         <div class="slider__container">
           <h2 class="slider__title">Elit vel massa accumsan lacinia</h2>
           <div class="slide-box">
-            <div class="slide slide--second">
+            <div class="slide js-slide">
               <img
                 class="slide__image"
                 src="assets/images/food-1.png"
@@ -337,7 +331,7 @@
               </p>
               <p class="slide__date">05 November 2021</p>
             </div>
-            <div class="slide slide--second">
+            <div class="slide js-slide">
               <img
                 class="slide__image"
                 src="assets/images/food-2.png"
@@ -347,7 +341,7 @@
               <p class="slide__desc">Etiam vulputate ipsum massa</p>
               <p class="slide__date">05 November 2021</p>
             </div>
-            <div class="slide slide--second">
+            <div class="slide js-slide">
               <img
                 class="slide__image"
                 src="assets/images/food-1.png"
@@ -359,7 +353,7 @@
               </p>
               <p class="slide__date">05 November 2021</p>
             </div>
-            <div class="slide slide--second">
+            <div class="slide js-slide">
               <img
                 class="slide__image"
                 src="assets/images/food-2.png"
@@ -371,14 +365,11 @@
             </div>
           </div>
           <div class="slider__arrows">
-            <button
-              class="btn btn--slider slider__button-left-second"
-              type="button"
-            >
+            <button class="btn btn--slider js-slider-button-left" type="button">
               <span class="icon-arrow-left"></span>
             </button>
             <button
-              class="btn btn--slider slider__button-right-second"
+              class="btn btn--slider js-slider-button-right"
               type="button"
             >
               <span class="icon-arrow-right"></span>

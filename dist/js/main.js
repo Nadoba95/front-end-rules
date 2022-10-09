@@ -4,7 +4,7 @@ import "./dropdown/dropdown.js";
 
 const headerDropdownsHover = document.querySelectorAll(".js-header-dropdown");
 
-const nav = document.querySelector("js-header-nav");
+const nav = document.querySelector(".js-header-nav");
 const overlay = document.querySelector(".js-overlay");
 const btnHeaderSearch = document.querySelector(".js-header-button-search");
 const btnHeaderMenu = document.querySelector(".js-header-button-menu");
@@ -23,17 +23,17 @@ function closeModal() {
 }
 
 function openMenu() {
-  this.classList.remove("hidden");
+  this.classList.add("hidden");
   btnHeaderSearch.classList.add("hidden");
   btnHeaderClose.classList.remove("hidden");
-  nav.classList.remove("hidden");
+  nav.style.display = "block";
 }
 
 function closeMenu() {
   this.classList.add("hidden");
   btnHeaderSearch.classList.remove("hidden");
   btnHeaderMenu.classList.remove("hidden");
-  nav.classList.add("hidden");
+  nav.style.display = "none";
 }
 
 function pickYear() {
@@ -48,6 +48,7 @@ function pickYear() {
 
 if (innerWidth > 1200) {
   headerDropdownsHover.forEach((dropdown) => dropdown.classList.add("hover"));
+  // nav.classList.remove("hidden");
 }
 
 btnHeaderSearch.addEventListener("click", openModal);

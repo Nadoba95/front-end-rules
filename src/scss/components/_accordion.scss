@@ -1,5 +1,9 @@
 .accordion {
   padding: 70px 20px;
+
+  @include breakpoint($tablet) {
+    padding: 50px 20px;
+  }
 }
 
 .accordion__container {
@@ -14,6 +18,11 @@
   line-height: 50px;
   color: $dark-green;
   margin-bottom: 30px;
+
+  @include breakpoint($tablet) {
+    font-size: 30px;
+    line-height: 40px;
+  }
 }
 
 .accordion__head {
@@ -30,10 +39,12 @@
 }
 
 .accordion__head-title {
+  max-width: 85%;
   font-size: 30px;
   font-weight: 700;
   line-height: 39px;
   color: $brown;
+  text-align: left;
 }
 
 .accordion__body {
@@ -41,6 +52,10 @@
   padding-right: 42px;
   overflow: hidden;
   transition: max-height $dropdown-duration ease-out;
+
+  @include breakpoint($tablet) {
+    padding-right: 0;
+  }
 }
 
 .accordion__desc-box {

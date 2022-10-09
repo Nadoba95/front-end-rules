@@ -1,5 +1,9 @@
 .tabs {
   padding: 70px 20px;
+
+  @include breakpoint($tablet) {
+    padding: 50px 20px;
+  }
 }
 
 .tabs__container {
@@ -15,6 +19,11 @@
   font-weight: 700;
   line-height: 50px;
   color: $dark-green;
+
+  @include breakpoint($tablet) {
+    font-size: 30px;
+    line-height: 40px;
+  }
 }
 
 .calendar {
@@ -37,19 +46,25 @@
   font-size: 22px;
   line-height: 50px;
   background-color: $silver;
-  border-radius: 5px;
+  border-radius: 5px 5px 0 0;
   cursor: pointer;
   transition: none;
+
+  &.active {
+    background-color: $light-green;
+    color: $white;
+    font-weight: 700;
+  }
+
+  @include breakpoint($tablet) {
+    width: 120px;
+    height: 40px;
+    font-size: 18px;
+  }
 }
 
 .calendar__year:hover {
   background-color: lighten($light-green, $amount: 20);
-}
-
-.calendar__year.active {
-  background-color: $light-green;
-  color: $white;
-  font-weight: 700;
 }
 
 .calendar__desc-box {

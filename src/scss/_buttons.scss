@@ -5,11 +5,12 @@
   border: none;
   outline: none;
   cursor: pointer;
+  padding: 0;
 }
 
 .btn {
   @extend %button;
-  transition: $btns-transition-lenght;
+  transition: $btns-transition-length;
 }
 
 .btn--red {
@@ -25,6 +26,11 @@
   background-color: $red;
   color: $white;
   border-radius: 5px;
+
+  @include breakpoint($mobile) {
+    font-size: 18px;
+    line-height: 28px;
+  }
 }
 
 .btn--red:hover {
@@ -36,7 +42,7 @@
   border: 1px solid $brown;
   padding: 22px 29px;
   border-radius: 50%;
-  transition: $btns-transition-lenght;
+  transition: $btns-transition-length;
 }
 
 .btn--slider:hover {
