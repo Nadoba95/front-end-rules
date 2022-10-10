@@ -9,6 +9,12 @@
   @include breakpoint($tablet) {
     padding: 20px;
   }
+
+  @include breakpoint($mobile) {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
 }
 
 .footer__list {

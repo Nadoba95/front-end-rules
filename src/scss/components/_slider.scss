@@ -13,6 +13,14 @@
   flex-direction: column;
   gap: 30px;
   margin: 0 auto;
+
+  @include breakpoint($tablet) {
+    width: clamp(250px, 100%, 728px);
+  }
+
+  @include breakpoint($mobile) {
+    width: clamp(250px, 100%, 335px);
+  }
 }
 
 .slider__title {
@@ -24,6 +32,11 @@
   @include breakpoint($tablet) {
     font-size: 30px;
     line-height: 40px;
+  }
+
+  @include breakpoint($mobile) {
+    font-size: 26px;
+    line-height: 32px;
   }
 }
 
@@ -42,16 +55,21 @@
 }
 
 .slide__image {
-  width: 580px;
+  max-width: 580px;
   height: 350px;
   background-position: center;
   background-size: cover;
   margin-bottom: 40px;
 
   @include breakpoint($tablet) {
-    width: 350px;
+    max-width: 350px;
     height: auto;
     border-radius: 15px;
+  }
+
+  @include breakpoint($mobile) {
+    max-width: 335px;
+    margin-bottom: 36px;
   }
 }
 
@@ -61,6 +79,12 @@
   letter-spacing: 3px;
   color: $red;
   margin-bottom: 20px;
+
+  @include breakpoint($mobile) {
+    font-size: 12px;
+    line-height: 12px;
+    margin-bottom: 16px;
+  }
 }
 
 .slide__desc {
@@ -75,10 +99,21 @@
     font-size: 22px;
     line-height: 30px;
   }
+
+  @include breakpoint($mobile) {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 16px;
+  }
 }
 
 .slide__date {
   line-height: 16px;
+
+  @include breakpoint($mobile) {
+    font-size: 14px;
+    line-height: 14px;
+  }
 }
 
 .slider__arrows {

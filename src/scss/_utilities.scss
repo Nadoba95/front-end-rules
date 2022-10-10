@@ -12,6 +12,10 @@ body {
 .icon-arrow-left {
   font-size: 32px;
   color: $red;
+
+  @include breakpoint($mobile) {
+    font-size: 20px;
+  }
 }
 
 .icon-minus,

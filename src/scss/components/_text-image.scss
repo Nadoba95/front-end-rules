@@ -12,6 +12,7 @@
 
   @include breakpoint($mobile) {
     flex-direction: column;
+    align-items: flex-start;
     gap: 20px;
   }
 }
@@ -19,7 +20,6 @@
 .text-image--reverse {
   @include breakpoint($mobile) {
     flex-direction: column-reverse;
-    align-items: flex-start;
   }
 }
 
@@ -30,11 +30,11 @@
   gap: 30px;
 
   @include breakpoint($tablet) {
+    max-width: none;
     gap: 20px;
   }
 
   @include breakpoint($mobile) {
-    max-width: 100%;
     gap: 10px;
   }
 }

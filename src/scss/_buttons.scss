@@ -43,6 +43,10 @@
   padding: 22px 29px;
   border-radius: 50%;
   transition: $btns-transition-length;
+
+  @include breakpoint($mobile) {
+    padding: 18px 23px;
+  }
 }
 
 .btn--slider:hover {

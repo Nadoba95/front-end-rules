@@ -200,7 +200,15 @@
         <div class="tabs__container">
           <h2 class="tabs__title">Turpis eu ultrices porttitor</h2>
           <div class="calendar">
-            <div class="calendar__years">
+            <div class="calendar__archive-box">
+              <div class="calendar__selected-year js-calendar-selected-year">
+                2021
+              </div>
+              <button class="btn calendar__archive js-calendar-archive">
+                Archive
+              </button>
+            </div>
+            <div class="calendar__years js-calendar-years">
               <button
                 class="btn calendar__year js-calendar-tab active"
                 type="button"
@@ -231,68 +239,71 @@
               </button>
             </div>
 
-            <div class="calendar__desc-box js-calendar-desc-box">
-              <p class="calendar__desc">
-                Proin pretium vehicula sagittis. Donec eget orci eget nunc
-                vulputate pharetra semper feugiat orci. Phasellus pharetra dui
-                erat, ut eleifend nibh sagittis ac. Nulla molestie, nunc vel
-                faucibus dictum, ligula tellus rutrum dui, nec mattis odio massa
-                eu nunc. Morbi in nulla sed leo maximus scelerisque. Mauris
-                libero odio, feugiat vel risus sed, pretium placerat turpis. Sed
-                efficitur id sem at lacinia. Phasellus semper fringilla
-                ullamcorper. Fusce id porta enim, sed gravida urna.
-              </p>
-              <p class="calendar__desc">
-                Nullam molestie elit vel massa accumsan lacinia. Aliquam
-                faucibus sapien ante, eu cursus risus rutrum sit amet.
-                Pellentesque at vehicula lacus.
-              </p>
-            </div>
-            <div class="calendar__desc-box js-calendar-desc-box hidden">
-              <p class="calendar__desc">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam
-                repudiandae voluptatem ratione ducimus odio. Debitis ducimus
-                expedita earum nobis non alias sequi culpa. Quam, illo iusto.
-                Provident quod quasi ducimus exercitationem doloremque. Facilis
-                nostrum itaque soluta esse rem culpa quidem velit a, quibusdam
-                eaque. Commodi earum mollitia nesciunt labore obcaecati.
-              </p>
-              <p class="calendar__desc">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                adipisci sapiente, porro ad illo autem quod! Blanditiis velit
-                facere quas.
-              </p>
-            </div>
-            <div class="calendar__desc-box js-calendar-desc-box hidden">
-              <p class="calendar__desc">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Deleniti illo vitae nesciunt consequatur, nostrum tenetur
-                voluptate maiores iste. Corporis assumenda quidem eos nostrum
-                autem maiores illum asperiores blanditiis natus dignissimos
-                omnis non similique esse illo tempora ullam cumque, laborum
-                culpa incidunt consequuntur soluta sed? Voluptate iusto
-                praesentium in earum maiores!
-              </p>
-              <p class="calendar__desc">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam impedit velit labore maxime numquam expedita odio
-                delectus nesciunt fuga nulla a iste, enim itaque harum,
-                voluptatibus dolore? Fuga odit a suscipit, iusto beatae eaque
-                quia quos nam hic temporibus similique!
-              </p>
-            </div>
-            <div class="calendar__desc-box js-calendar-desc-box hidden">
-              <p class="calendar__desc">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Impedit dolore officiis quod vel! Deleniti provident suscipit
-                facere, vel quaerat ipsam.
-              </p>
-              <p class="calendar__desc">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Maiores, laudantium. Reprehenderit consequuntur nesciunt sed
-                facere deserunt, aut, porro eaque sequi consectetur beatae
-                assumenda. Ut eos, facere quidem delectus autem sint.
-              </p>
+            <div class="calendar__desc-container js-calendar-desc-container">
+              <div class="calendar__desc-box js-calendar-desc-box">
+                <p class="calendar__desc">
+                  Proin pretium vehicula sagittis. Donec eget orci eget nunc
+                  vulputate pharetra semper feugiat orci. Phasellus pharetra dui
+                  erat, ut eleifend nibh sagittis ac. Nulla molestie, nunc vel
+                  faucibus dictum, ligula tellus rutrum dui, nec mattis odio
+                  massa eu nunc. Morbi in nulla sed leo maximus scelerisque.
+                  Mauris libero odio, feugiat vel risus sed, pretium placerat
+                  turpis. Sed efficitur id sem at lacinia. Phasellus semper
+                  fringilla ullamcorper. Fusce id porta enim, sed gravida urna.
+                </p>
+                <p class="calendar__desc">
+                  Nullam molestie elit vel massa accumsan lacinia. Aliquam
+                  faucibus sapien ante, eu cursus risus rutrum sit amet.
+                  Pellentesque at vehicula lacus.
+                </p>
+              </div>
+              <div class="calendar__desc-box js-calendar-desc-box hidden">
+                <p class="calendar__desc">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Totam repudiandae voluptatem ratione ducimus odio. Debitis
+                  ducimus expedita earum nobis non alias sequi culpa. Quam, illo
+                  iusto. Provident quod quasi ducimus exercitationem doloremque.
+                  Facilis nostrum itaque soluta esse rem culpa quidem velit a,
+                  quibusdam eaque. Commodi earum mollitia nesciunt labore
+                  obcaecati.
+                </p>
+                <p class="calendar__desc">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                  adipisci sapiente, porro ad illo autem quod! Blanditiis velit
+                  facere quas.
+                </p>
+              </div>
+              <div class="calendar__desc-box js-calendar-desc-box hidden">
+                <p class="calendar__desc">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Deleniti illo vitae nesciunt consequatur, nostrum tenetur
+                  voluptate maiores iste. Corporis assumenda quidem eos nostrum
+                  autem maiores illum asperiores blanditiis natus dignissimos
+                  omnis non similique esse illo tempora ullam cumque, laborum
+                  culpa incidunt consequuntur soluta sed? Voluptate iusto
+                  praesentium in earum maiores!
+                </p>
+                <p class="calendar__desc">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quisquam impedit velit labore maxime numquam expedita odio
+                  delectus nesciunt fuga nulla a iste, enim itaque harum,
+                  voluptatibus dolore? Fuga odit a suscipit, iusto beatae eaque
+                  quia quos nam hic temporibus similique!
+                </p>
+              </div>
+              <div class="calendar__desc-box js-calendar-desc-box hidden">
+                <p class="calendar__desc">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Impedit dolore officiis quod vel! Deleniti provident suscipit
+                  facere, vel quaerat ipsam.
+                </p>
+                <p class="calendar__desc">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Maiores, laudantium. Reprehenderit consequuntur nesciunt sed
+                  facere deserunt, aut, porro eaque sequi consectetur beatae
+                  assumenda. Ut eos, facere quidem delectus autem sint.
+                </p>
+              </div>
             </div>
           </div>
         </div>

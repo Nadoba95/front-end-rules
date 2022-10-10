@@ -23,6 +23,11 @@
     font-size: 30px;
     line-height: 40px;
   }
+
+  @include breakpoint($mobile) {
+    font-size: 26px;
+    line-height: 32px;
+  }
 }
 
 .accordion__head {
@@ -32,6 +37,10 @@
   align-items: center;
   padding: 31px 0;
   border-top: 2px solid $acc-border;
+
+  @include breakpoint($mobile) {
+    padding: 15px 0 21px 0;
+  }
 }
 
 .accordion__head:hover {
@@ -45,6 +54,11 @@
   line-height: 39px;
   color: $brown;
   text-align: left;
+
+  @include breakpoint($mobile) {
+    font-size: 20px;
+    line-height: 21px;
+  }
 }
 
 .accordion__body {
@@ -60,15 +74,28 @@
 
 .accordion__desc-box {
   margin-bottom: 60px;
+
+  @include breakpoint($mobile) {
+    margin-bottom: 20px;
+  }
 }
 
 .accordion__desc {
   line-height: 28px;
+
+  @include breakpoint($mobile) {
+    font-size: 14px;
+    line-height: 24px;
+  }
 }
 
 .accordion__desc:nth-child(1) {
   padding-top: 15px;
   margin-bottom: 27px;
+
+  @include breakpoint($mobile) {
+    margin-bottom: 26px;
+  }
 }
 
 .accordion__orange {

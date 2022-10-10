@@ -21,6 +21,11 @@
     font-size: 30px;
     line-height: 40px;
   }
+
+  @include breakpoint($mobile) {
+    font-size: 26px;
+    line-height: 32px;
+  }
 }
 
 .form {
@@ -40,6 +45,10 @@
     grid-template-columns: repeat(2, calc(50% - 15px));
     column-gap: 30px;
   }
+
+  @include breakpoint($mobile) {
+    grid-template-columns: 100%;
+  }
 }
 
 .form__item {
@@ -50,6 +59,10 @@
 
 .form__item:last-child {
   grid-column: 1 / 3;
+
+  @include breakpoint($mobile) {
+    grid-column: 1 / 2;
+  }
 }
 
 .form__label {
@@ -60,6 +73,11 @@
   @include breakpoint($tablet) {
     font-size: 20px;
     line-height: 21px;
+  }
+
+  @include breakpoint($mobile) {
+    font-size: 18px;
+    line-height: 18px;
   }
 }
 
@@ -77,6 +95,11 @@
     font-size: 20px;
     line-height: 21px;
   }
+
+  @include breakpoint($mobile) {
+    font-size: 16px;
+    line-height: 16px;
+  }
 }
 
 .form__input,
@@ -90,11 +113,19 @@
   @include breakpoint($tablet) {
     padding: 19px 12px 18px 12px;
   }
+
+  @include breakpoint($mobile) {
+    padding: 16px 11px 15px 11px;
+  }
 }
 
 .form__textarea {
   height: 180px;
   resize: none;
+
+  @include breakpoint($mobile) {
+    height: 160px;
+  }
 }
 
 .form__radio-buttons {
@@ -132,8 +163,13 @@
   color: $white;
   border: 1px solid $silver;
   border-radius: 5px;
-  padding: 9px 16px;
+  padding: 10px 16px;
   align-self: center;
+
+  @include breakpoint($mobile) {
+    font-size: 18px;
+    line-height: 28px;
+  }
 }
 
 .form__submit:hover {

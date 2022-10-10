@@ -1,7 +1,6 @@
 const sliders = document.querySelectorAll(".js-slider");
 
-const tablet = innerWidth <= 1200;
-const mobile = innerWidth <= 768;
+const tablet = innerWidth < 1200;
 
 sliders.forEach((slider) => {
   const slides = slider.querySelectorAll(".js-slide");
